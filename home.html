@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        p{
+            margin-bottom: 0px !important;
+        }
+        .center-content {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+        .radio-text-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px;
+        }
+        .radio-text-container label {
+            margin-bottom: 5px;
+        }
+        .radio-text-container .texts {
+            margin-left: 2px;
+        }
+        .radio-text-container .texts p {
+            margin: 2px 0;
+        }
+        .custom-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; 
+        margin-bottom: 10px;
+      }
+    .custom-col {
+        min-width: 0; 
+        display: flex;
+        justify-content: center;
+    }
+    .inner-col {
+        width: 80px;
+        height: 60px;
+        background-color: #ff6b82;
+        text-align: center;
+        line-height: 63px; 
+        color: white; 
+        font-weight: bold;
+        border-top-left-radius: 10px; 
+        border-bottom-left-radius:10px; 
+      }
+        input[type="radio" i] {
+            accent-color: #ff4f6a;
+        }
+       .dropdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .dropdown-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            display: block;
+        }
+        .full-width-button {
+        display: block; 
+        width: 100%; 
+        padding: 10px; 
+        font-size: 16px; 
+        text-align: center; 
+        border: none; 
+        background-color: #ff6b82;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer; 
+        margin-top: 10px;
+       }
+        .full-width-button:hover{
+            background-color: #ff6b82
+        }
+    </style>
+</head>
+<body>
+    <div class="center-content">
+        <h2 style="color:#ff6b82; margin-bottom: 10px;">YAY! it's BOGO</h2>
+        <div class="custom-row">
+            <div class="custom-col">
+                <div class="inner-col">30% Off</div>
+            </div>
+            <div class="custom-col">
+                <input type="radio" id="radio_" name="" value="" style="margin-right: 10px;">
+                <label class="texts" for="radio_" style="margin-top: 10px;">
+                    <p>Buy 1 get 2</p>
+                    <p style="margin-top: 5px; "><b>$18.00 USD</b></p>
+                </label>
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="custom-col">
+                <div class="inner-col">30% Off</div>
+            </div>
+            <div class="custom-col">
+                <input type="radio" id="radio" name="" value="" style="margin-right: 10px;">
+                <label class="texts" for="radio"  >
+                    <p>Buy 2 get 4</p>
+                    <p style="margin-top: 5px; "><b>$24.00 USD</b></p>
+                </label>
+                <p style="margin-top: 22px;margin-left: 15px; color: #ff6b82;"><b>Most popular</b></p>
+            </div>
+        </div>
+        <div style=" border: 1px solid #ff6b82; border-radius: 10px;">
+            <div class="radio-text-container">
+                <input type="radio" id="radio_btn" name="" value="" style="margin-top: 20px;">
+                <label class="texts" for="radio_btn">
+                    <p>Buy 3 get 6 <span style="background-color: #ff6b82; padding: 3px; border-radius: 5px; color: #ffff; font-size: 15px;">10% Off</span></p>
+                    <p style="margin-top: 5px; "><b>$36.00 USD</b> <span style="color: #ccc; font-size: 12px;"><s>$10.00 USD</s></span></p>
+                </label>
+            </div>
+            <div class="dropdown-grid">
+                <div class="dropdown-container">
+                    <label for="dropdown1" class="dropdown-label">Size</label>
+                    <select id="dropdown1">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
+                    <select id="dropdown1" style="margin-top: 10px;">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
+                </div>
+                <div class="dropdown-container">
+                    <label for="dropdown2" class="dropdown-label">Colour</label>
+                    <select id="dropdown2">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                    </select>
+                    <select id="dropdown2" style="margin-top: 10px;">
+                        <option value="black">Colour</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div style=" display: flex; justify-content: space-between; margin-top: 15px;">
+            <div style="color: #ff6b82">Free Delivery</div>
+            <div>Total:$18.00 USD</div>
+        </div>
+        <button class="full-width-button">+ Add to cart</button>
+        <p style="text-align: center; ">Powered by <span style="color: #ff6b82;">Pumper</span></p>
+    </div>
+</body>
+</html>
